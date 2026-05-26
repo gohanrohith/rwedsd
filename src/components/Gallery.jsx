@@ -28,7 +28,7 @@ export default function Gallery() {
               Pre-Wedding
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-light" style={{ color: '#2C2C2C' }}>
-              Our Love Story
+              Our Story
             </h2>
             <OrnamentDivider className="mt-4 max-w-xs mx-auto" />
           </div>

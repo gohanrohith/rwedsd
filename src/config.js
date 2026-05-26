@@ -129,8 +129,8 @@ export const EVENTS = [
 
 /** Replace src with your actual pre-wedding photo URLs */
 export const GALLERY = [
-  { src: 'https://picsum.photos/seed/coupleone/900/480',   caption: 'Every love story is beautiful…'        },
-  { src: 'https://picsum.photos/seed/coupletwo/900/480',   caption: '…but ours is my favourite.'            },
-  { src: 'https://picsum.photos/seed/couplethree/900/480', caption: 'You are my forever & always.'          },
-  { src: 'https://picsum.photos/seed/couplefour/900/480',  caption: 'Two families, one beautiful journey.'  },
+  { src: '/DSC01851 copy.jpg',   caption: 'Every love story is beautiful…'        },
+  { src: '/DSC01803 copy.jpg',   caption: '…but ours is my favourite.'            },
+  { src: '/DSC09404.JPG', caption: 'You are my forever & always.'          },
+  { src: '/DSC09419.JPG',  caption: 'Two families, one beautiful journey.'  },
 ];

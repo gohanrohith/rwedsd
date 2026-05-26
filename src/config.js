@@ -28,13 +28,13 @@ export const CONTACTS = {
   /** WhatsApp number for RSVP — country code + number, no + sign */
   whatsappRsvp: '917981249483',
   bride: {
-    label: "Bride's Family",
+    label: 'Deekshitha',
     name:  'Vennamaneni Muralidhar Rao',
     phone: '+91 79812 49483',
     wa:    '917981249483',
   },
   groom: {
-    label: "Groom's Family",
+    label: 'Rohith',
     name:  'Annamaneni Jayasimha Rao',
     phone: '+91 88970 14096',
     wa:    '918897014096',

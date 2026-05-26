@@ -4,6 +4,7 @@ import FlatElephant from './FlatElephant';
 import Particles from './ui/Particles';
 import SparklesText from './ui/SparklesText';
 import AnimatedGradientText from './ui/AnimatedGradientText';
+import lord1 from '../assets/lord1.svg';
 
 const CORNERS = [
   { style: { top: 0, left: 0 } },
@@ -71,13 +72,13 @@ export default function Hero() {
       {/* ── Main content ── */}
       <div className="flex-1 flex flex-col items-center justify-center relative z-10 text-center px-6 max-w-xl mx-auto w-full">
 
-        {/* Lotus badge */}
+        {/* Lord badge */}
         <div className="flex justify-center mb-8">
           <div
-            className="w-20 h-20 rounded-full flex items-center justify-center shadow-xl"
-            style={{ background: 'rgba(253,251,247,.95)', border: '1.5px solid #D4AF37' }}
+            className="flex items-center justify-center shadow-xl rounded-2xl overflow-hidden"
+            style={{ background: 'rgba(253,251,247,.95)', border: '1.5px solid #D4AF37', padding: '6px 10px' }}
           >
-            <span style={{ fontSize: '2.2rem' }}>🪷</span>
+            <img src={lord1} alt="Auspicious blessing" style={{ width: 140, height: 'auto', display: 'block' }} />
           </div>
         </div>
 

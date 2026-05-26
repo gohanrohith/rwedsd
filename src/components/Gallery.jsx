@@ -13,9 +13,9 @@ export default function Gallery() {
   const prev = () => go(cur - 1);
 
   useEffect(() => {
-    const id = setInterval(next, 4500);
+    const id = setInterval(() => setCur(c => (c + 1) % total), 4500);
     return () => clearInterval(id);
-  }, [cur]);
+  }, [total]);
 
   return (
     <section className="py-24 px-6" style={{ background: '#F5EFE0' }}>

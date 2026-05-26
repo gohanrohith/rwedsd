@@ -9,7 +9,7 @@ export const COUPLE = {
   groom: { firstName: 'Rohith',     lastName: 'Annamaneni', fullName: 'Chi. Rohith'              },
   bride: { firstName: 'Deekshitha', lastName: 'Vennamaneni', fullName: 'Chi. La. Sou. Deekshitha' },
   tagline: 'are joyfully getting married',
-  hashtag: '#RohithWedDeekshitha2026',
+  hashtag: '#RohithWedDeekshitha',
 };
 
 export const WEDDING = {
@@ -67,40 +67,44 @@ export const FAMILIES = {
   },
 };
 
-const VENUE     = 'Vinayaka Function Hall';
-const ADDRESS   = 'Near Delhi Public School, H-W Highway, Rampur, Hanumakonda';
-const MAPS_URL  = 'https://maps.google.com/?q=Vinayaka+Function+Hall+Rampur+Hanumakonda';
+const WEDDING_VENUE   = 'Vinayaka Function Hall';
+const WEDDING_ADDRESS = 'Near Delhi Public School, H-W Highway, Rampur, Hanumakonda';
+const WEDDING_MAP     = 'https://maps.google.com/?q=Vinayaka+Function+Hall+Rampur+Hanumakonda';
+
+const GROOM_VENUE   = "Groom's Residence";
+const GROOM_ADDRESS = 'Rampur, Hanumakonda';
+const GROOM_MAP     = 'https://maps.app.goo.gl/PSt3a4AJQGyBi3vj9';
 
 export const EVENTS = [
   {
-    id:        'haldi',
-    name:      'Haldhi Ceremony',
-    date:      'Wednesday, 24th June 2026',
-    time:      'Morning',
-    venue:     VENUE,
-    address:   ADDRESS,
-    mapsUrl:   MAPS_URL,
-    icon:      '🌸',
-    gradient:  'linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #92400E 100%)',
-    badge:     'Jun 24',
-    badgeBg:   '#D4AF37',
-    badgeColor:'#1A4332',
-    btnColor:  '#1A4332',
-  },
-  {
     id:        'pellikoduku',
     name:      'Pellikoduku',
-    date:      'Wednesday, 24th June 2026',
-    time:      'Evening',
-    venue:     VENUE,
-    address:   ADDRESS,
-    mapsUrl:   MAPS_URL,
+    date:      'Sunday, 21st June 2026',
+    time:      'Morning',
+    venue:     'Nitya A/C Banquet Hall',
+    address:   'Mini Function Hall',
+    mapsUrl:   'https://maps.app.goo.gl/Ns6rSA4izDbgTDxJA',
     icon:      '🎊',
     gradient:  'linear-gradient(135deg, #4F46E5 0%, #7C3AED 60%, #5B21B6 100%)',
-    badge:     'Jun 24',
+    badge:     'Jun 21',
     badgeBg:   '#D4AF37',
     badgeColor:'#4F46E5',
     btnColor:  '#4F46E5',
+  },
+  {
+    id:        'haldi',
+    name:      'Haldi & Mehendi',
+    date:      'Tuesday, 23rd June 2026',
+    time:      'Haldi — Morning · Mehendi — Evening',
+    venue:     GROOM_VENUE,
+    address:   GROOM_ADDRESS,
+    mapsUrl:   GROOM_MAP,
+    icon:      '🌸',
+    gradient:  'linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #92400E 100%)',
+    badge:     'Jun 23',
+    badgeBg:   '#D4AF37',
+    badgeColor:'#1A4332',
+    btnColor:  '#1A4332',
   },
   {
     id:        'wedding',
@@ -109,9 +113,9 @@ export const EVENTS = [
     time:      '08:38 AM',
     note:      'Sumuhurtham',
     feast:     'Lunch will be served at 12:00 noon',
-    venue:     VENUE,
-    address:   ADDRESS,
-    mapsUrl:   MAPS_URL,
+    venue:     WEDDING_VENUE,
+    address:   WEDDING_ADDRESS,
+    mapsUrl:   WEDDING_MAP,
     icon:      '🪷',
     gradient:  'linear-gradient(135deg, #8B0000 0%, #6B0000 55%, #3B0000 100%)',
     badge:     'Jun 25',

@@ -2,6 +2,7 @@ import { useCountdown } from '../hooks/useCountdown';
 import { WEDDING } from '../config';
 import TempleSilhouette from './TempleSilhouette';
 import Ripple from './ui/Ripple';
+import ScrollArrow from './ui/ScrollArrow';
 
 function CountBlock({ value, label }) {
   const display = String(value).padStart(2, '0');
@@ -80,6 +81,7 @@ export default function Countdown() {
 
       </div>
 
+      <ScrollArrow color="#D4AF37" />
       <TempleSilhouette />
     </section>
   );

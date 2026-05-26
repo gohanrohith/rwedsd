@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { GALLERY, COUPLE } from '../config';
 import OrnamentDivider from './OrnamentDivider';
 import BlurFade from './ui/BlurFade';
+import ScrollArrow from './ui/ScrollArrow';
 
 export default function Gallery() {
   const [cur, setCur] = useState(0);
@@ -105,6 +106,7 @@ export default function Gallery() {
 
         </div>
       </BlurFade>
+      <ScrollArrow color="#1A4332" />
     </section>
   );
 }

@@ -136,7 +136,7 @@ export default function RSVPForm() {
     const mealLabel   = form.meal === 'veg' ? 'Vegetarian 🥗' : 'Non-Vegetarian 🍗';
 
     const lines = [
-      `💐 *RSVP — ${COUPLE.bride.firstName} & ${COUPLE.groom.firstName} Wedding* 💐`,
+      `*RSVP — ${COUPLE.bride.firstName} & ${COUPLE.groom.firstName} Wedding*`,
       '',
       `*Name:* ${form.name}`,
       `*WhatsApp:* ${form.phone}`,

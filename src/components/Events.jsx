@@ -2,6 +2,7 @@ import { EVENTS } from '../config';
 import OrnamentDivider from './OrnamentDivider';
 import BlurFade from './ui/BlurFade';
 import ShimmerButton from './ui/ShimmerButton';
+import ScrollArrow from './ui/ScrollArrow';
 
 function MapIcon() {
   return (
@@ -118,6 +119,7 @@ export default function Events() {
 
         </div>
       </BlurFade>
+      <ScrollArrow />
     </section>
   );
 }

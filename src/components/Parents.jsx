@@ -2,6 +2,7 @@ import { FAMILIES, SHLOKA } from '../config';
 import OrnamentDivider from './OrnamentDivider';
 import { MandalaCorner } from './IndianAccents';
 import BlurFade from './ui/BlurFade';
+import ScrollArrow from './ui/ScrollArrow';
 
 function FamilyCard({ side, data }) {
   const [p1, p2] = data.parents;
@@ -120,6 +121,7 @@ export default function Parents() {
 
         </div>
       </BlurFade>
+      <ScrollArrow color="#1A4332" />
     </section>
   );
 }

@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html  { scroll-behavior: smooth; }
+body  { background: #FDFBF7; color: #2C2C2C; overflow-x: hidden; }
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #FDFBF7; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+
+/* ── Background dot micro-pattern ── */
+.dot-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='24' cy='24' r='1' fill='%23D4AF37' fill-opacity='.06'/%3E%3C/svg%3E");
+}
+
+/* ── Floating lotus animations ── */
+@keyframes floatA {
+  0%,100% { transform: translateY(0) rotate(0deg); opacity: .4; }
+  50%      { transform: translateY(-16px) rotate(8deg); opacity: .7; }
+}
+@keyframes floatB {
+  0%,100% { transform: translateY(0) rotate(0deg); opacity: .35; }
+  50%      { transform: translateY(-12px) rotate(-6deg); opacity: .65; }
+}
+.float-a { animation: floatA 7s ease-in-out infinite; }
+.float-b { animation: floatB 7s ease-in-out infinite 2.8s; }
+
+/* ── Scroll arrow ── */
+@keyframes scrollBounce {
+  0%,100% { transform: translateY(0); opacity: 1; }
+  50%      { transform: translateY(9px); opacity: .5; }
+}
+.scroll-bounce { animation: scrollBounce 1.7s ease-in-out infinite; }
+
+/* ── Countdown flip ── */
+@keyframes countFlip {
+  from { transform: rotateX(80deg); opacity: 0; }
+  to   { transform: rotateX(0);     opacity: 1; }
+}
+.count-flip { animation: countFlip .25s ease; }
+
+/* ── Event card lift ── */
+.event-card { transition: transform .3s ease, box-shadow .3s ease; }
+.event-card:hover { transform: translateY(-5px); box-shadow: 0 20px 56px rgba(212,175,55,.18); }
+
+/* ── Gallery slider ── */
+.gallery-track { display: flex; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.gallery-slide { min-width: 100%; }
+
+/* ── WA pulse ring ── */
+@keyframes waPulse {
+  0%   { transform: scale(1);    opacity: .65; }
+  100% { transform: scale(1.16); opacity: 0; }
+}
+.wa-pulse-ring {
+  position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  animation: waPulse 2.2s ease-out infinite;
+  z-index: -1;
+}
+
+/* ── Form inputs ── */
+.form-input {
+  width: 100%; border-radius: .75rem; border: 1.5px solid #E2D9CE;
+  padding: .7rem 1rem; font-family: 'Inter', sans-serif; font-size: .875rem;
+  background: #FDFBF7; color: #2C2C2C; outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-input:focus { border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212,175,55,.15); }
+.form-input::placeholder { color: #BBB; }
+
+/* ── Attend card (radio) ── */
+/* Mobile: full-width horizontal row */
+.attend-card {
+  display: flex; flex-direction: row; align-items: center;
+  gap: .85rem; border-radius: 1rem; border: 2px solid #E2D9CE;
+  padding: .85rem 1.1rem; cursor: pointer; transition: all .2s;
+  background: #FDFBF7; user-select: none; text-align: left;
+}
+.attend-card .attend-text { display: flex; flex-direction: column; gap: .1rem; }
+.attend-card.selected  { border-color: #D4AF37; background: rgba(212,175,55,.07); }
+.attend-card:hover:not(.selected) { border-color: rgba(212,175,55,.5); }
+
+/* Tablet+: revert to vertical column card */
+@media (min-width: 640px) {
+  .attend-card {
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: .25rem; padding: .9rem .5rem; text-align: center;
+  }
+}
+
+/* ── Meal toggle ── */
+.meal-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: .4rem; padding: .7rem 1rem; border-radius: .75rem; border: 2px solid #E2D9CE;
+  cursor: pointer; transition: all .2s; font-size: .875rem; font-weight: 500; color: #555;
+}
+.meal-btn.selected { border-color: #1A4332; background: #1A4332; color: #D4AF37; }
+
+/* ── 21st.dev: Ripple rings ── */
+@keyframes ripple-ring {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%       { transform: translate(-50%, -50%) scale(0.9); }
+}
+.ripple-ring {
+  animation: ripple-ring var(--ring-dur, 2.4s) ease var(--ring-delay, 0s) infinite;
+}
+
+/* ── 21st.dev: BorderBeam spin ── */
+@keyframes beam-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── 21st.dev: Shimmer sweep ── */
+@keyframes shimmer-sweep {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ── 21st.dev: Gradient shift (AnimatedGradientText) ── */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* ─────────────────────────────────────────────
+   INDIAN WEDDING ELEMENTS
+   ───────────────────────────────────────────── */
+@keyframes dholBeatL {
+  0%, 45%, 100% { transform: rotate(-28deg); }
+  20%           { transform: rotate(16deg); }
+}
+@keyframes dholBeatR {
+  0%, 45%, 100% { transform: rotate(28deg); }
+  20%           { transform: rotate(-16deg); }
+}
+.dhol-stick-l {
+  animation: dholBeatL 0.55s ease-in-out infinite;
+  transform-box: fill-box;
+}
+.dhol-stick-r {
+  animation: dholBeatR 0.55s ease-in-out infinite 0.28s;
+  transform-box: fill-box;
+}
+
+/* Temple silhouette breathe */
+@keyframes templePulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.75; }
+}
+.temple-sil { animation: templePulse 6s ease-in-out infinite; }

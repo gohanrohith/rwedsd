@@ -55,10 +55,12 @@ export default function Gallery() {
                     />
                     <div className="absolute inset-0"
                          style={{ background: 'linear-gradient(180deg,transparent 55%,rgba(26,67,50,.8) 100%)' }} />
-                    <p className="absolute bottom-5 inset-x-0 text-center font-serif text-2xl italic px-6"
-                       style={{ color: '#FDFBF7' }}>
-                      {item.caption}
-                    </p>
+                    {item.caption && (
+                      <p className="absolute bottom-5 inset-x-0 text-center font-serif text-2xl italic px-6"
+                         style={{ color: '#FDFBF7' }}>
+                        {item.caption}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}

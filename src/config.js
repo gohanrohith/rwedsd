@@ -129,8 +129,8 @@ export const EVENTS = [
 
 /** Replace src with your actual pre-wedding photo URLs */
 export const GALLERY = [
-  { src: '/DSC01851 copy.jpg',   caption: 'Every love story is beautiful…'        },
-  { src: '/DSC01803 copy.jpg',   caption: '…but ours is my favourite.'            },
-  { src: '/DSC09404.JPG', caption: 'You are my forever & always.'          },
-  { src: '/DSC09419.JPG',  caption: 'Two families, one beautiful journey.'  },
+  { src: '/DSC01851 copy.jpg',   caption: '' },
+  { src: '/DSC01803 copy.jpg',   caption: '' },
+  { src: '/DSC09404.JPG',        caption: '' },
+  { src: '/DSC09419.JPG',        caption: 'Two families, one beautiful journey.' },
 ];

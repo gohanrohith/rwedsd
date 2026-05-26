@@ -343,8 +343,8 @@ export default function RSVPForm() {
                   </label>
                   <div className="flex gap-3">
                     {[
-                      { value: 'groom', label: "Groom's Family", name: CONTACTS.groom.name },
-                      { value: 'bride', label: "Bride's Family",  name: CONTACTS.bride.name },
+                      { value: 'groom', label: COUPLE.groom.firstName, name: CONTACTS.groom.name },
+                      { value: 'bride', label: COUPLE.bride.firstName,  name: CONTACTS.bride.name },
                     ].map(opt => (
                       <div
                         key={opt.value}

@@ -33,22 +33,23 @@ export default function SparklesText({
   sparklesCount = 7,
   colors = { first: '#D4AF37', second: '#8B0000' },
 }) {
+  const { first: colorFirst, second: colorSecond } = colors;
+
   const [sparkles, setSparkles] = useState(() =>
     Array.from({ length: sparklesCount }, () => makeSparkle(colors))
   );
 
   useEffect(() => {
-    // Replace one random sparkle every 350ms so there's always a star twinkling
     const id = setInterval(() => {
       setSparkles(prev => {
         const next = [...prev];
         const i = Math.floor(Math.random() * next.length);
-        next[i] = makeSparkle(colors);
+        next[i] = makeSparkle({ first: colorFirst, second: colorSecond });
         return next;
       });
     }, 350);
     return () => clearInterval(id);
-  }, [sparklesCount, colors.first, colors.second]);
+  }, [sparklesCount, colorFirst, colorSecond]);
 
   return (
     <span className={`relative inline-block ${className}`}>

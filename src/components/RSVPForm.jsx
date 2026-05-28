@@ -11,7 +11,7 @@ const ATTEND_OPTS = [
   { value: 'maybe', emoji: '🤔', label: 'Still Deciding',    note: 'Will confirm soon' },
 ];
 
-const INIT = { name: '', phone: '', attending: 'yes', guests: 2, meal: 'veg', message: '', rsvpTo: 'groom' };
+const INIT = { name: '', phone: '', attending: 'yes', guests: 2, meal: 'veg', message: '' };
 
 /* ── Success screen ── */
 function SuccessScreen({ name, attending, onReset }) {
@@ -150,7 +150,7 @@ export default function RSVPForm() {
       COUPLE.hashtag,
     ];
 
-    const waNumber = form.rsvpTo === 'groom' ? CONTACTS.groom.wa : CONTACTS.bride.wa;
+    const waNumber = CONTACTS.groom.wa;
     window.open(
       `https://wa.me/${waNumber}?text=${encodeURIComponent(lines.join('\n'))}`,
       '_blank',
@@ -335,33 +335,6 @@ export default function RSVPForm() {
                   />
                 </div>
 
-                {/* Send RSVP to */}
-                <div>
-                  <label className="font-sans text-xs uppercase tracking-widest block mb-3"
-                         style={{ color: '#1A4332', letterSpacing: '.16em' }}>
-                    Send RSVP To
-                  </label>
-                  <div className="flex gap-3">
-                    {[
-                      { value: 'groom', label: COUPLE.groom.firstName, name: CONTACTS.groom.name },
-                      { value: 'bride', label: COUPLE.bride.firstName,  name: CONTACTS.bride.name },
-                    ].map(opt => (
-                      <div
-                        key={opt.value}
-                        className={`meal-btn flex-col items-start gap-0.5 py-3 px-4${form.rsvpTo === opt.value ? ' selected' : ''}`}
-                        onClick={() => set('rsvpTo', opt.value)}
-                        role="radio"
-                        aria-checked={form.rsvpTo === opt.value}
-                        tabIndex={0}
-                        onKeyDown={e => e.key === 'Enter' && set('rsvpTo', opt.value)}
-                        style={{ alignItems: 'flex-start', flexDirection: 'column', gap: '.15rem' }}
-                      >
-                        <span className="font-sans text-xs font-semibold">{opt.label}</span>
-                        <span className="font-serif text-xs" style={{ opacity: .75 }}>{opt.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
 
                 {/* Submit */}
                 <div className="pt-2">
@@ -391,7 +364,6 @@ export default function RSVPForm() {
             </div>
             <div className="space-y-4">
               <ContactCard contact={CONTACTS.groom} />
-              <ContactCard contact={CONTACTS.bride} />
             </div>
           </div>
 
